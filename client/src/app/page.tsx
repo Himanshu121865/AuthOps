@@ -2,13 +2,14 @@ import { VaultConfig } from "@/components/VaultConfig";
 import { GitHubActions } from "@/components/GitHubActions";
 import { TelegramStatus } from "@/components/TelegramStatus";
 import { Shield } from "lucide-react";
+import PlasmaBackground from "@/components/PlasmaBackground";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[var(--color-background)] relative overflow-hidden flex flex-col items-center">
-      {/* Background gradients */}
-      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-brand/20 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#0088cc]/20 blur-[120px] rounded-full pointer-events-none" />
+    <main className="min-h-screen bg-[#060010] relative overflow-hidden flex flex-col items-center">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <PlasmaBackground color="#8b5cf6" opacity={0.6} direction="forward" speed={0.5} />
+      </div>
       
       <div className="w-full max-w-6xl px-6 py-12 md:py-20 flex flex-col gap-12 z-10">
         

@@ -19,29 +19,32 @@ function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export function GitHubActions() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
-    className="glass p-6 rounded-2xl flex flex-col gap-4">
+      className="glass p-6 rounded-2xl flex flex-col gap-4"
+    >
       <div className="flex items-center gap-3 mb-2">
         <div className="p-3 bg-white/10 rounded-xl">
           <GithubIcon className="w-6 h-6 text-white" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-white">GitHub Operations</h3>
+          <h3 className="text-lg font-semibold text-white">
+            GitHub Operations
+          </h3>
           <p className="text-sm text-gray-400">Agentic PR and Merge controls</p>
         </div>
       </div>
-      
+
       <div className="flex flex-col gap-3">
-        <input 
-          type="text" 
-          placeholder="Repository (e.g., owner/repo)" 
+        <input
+          type="text"
+          placeholder="Repository (e.g., owner/repo)"
           className="w-full bg-black/40 border border-[var(--color-panel-border)] rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand/50 transition-colors"
           defaultValue="AuthOps/agent-core"
         />
-        
+
         <div className="grid grid-cols-2 gap-3 mt-2">
           <button className="flex cursor-pointer items-center justify-center gap-2 py-3 bg-[var(--color-panel)] hover:bg-white/10 border border-[var(--color-panel-border)] rounded-xl text-sm font-medium text-white transition-all">
             <GitPullRequest className="w-4 h-4" />
@@ -53,7 +56,7 @@ export function GitHubActions() {
           </button>
         </div>
       </div>
-      
+
       <div className="mt-2 pt-4 border-t border-[var(--color-panel-border)]">
         <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
           <span>Recent Activity</span>
@@ -61,7 +64,9 @@ export function GitHubActions() {
         </div>
         <div className="flex items-center gap-2 p-3 bg-black/40 rounded-lg border border-[var(--color-panel-border)]">
           <div className="w-2 h-2 rounded-full bg-brand animate-pulse shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
-          <span className="text-sm text-gray-300">Agent spawned feature/auth0-vault PR #42</span>
+          <span className="text-sm text-gray-300">
+            Agent spawned feature/auth0-vault PR #42
+          </span>
         </div>
       </div>
     </motion.div>

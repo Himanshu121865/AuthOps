@@ -4,25 +4,30 @@ import { motion } from "framer-motion";
 
 export function TelegramStatus() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-    className="glass p-6 rounded-2xl flex flex-col gap-4">
+      className="glass p-6 rounded-2xl flex flex-col gap-4"
+    >
       <div className="flex items-center gap-3 mb-2">
         <div className="p-3 bg-[#0088cc]/20 rounded-xl">
           <Send className="w-6 h-6 text-[#0088cc]" />
         </div>
         <div>
           <h3 className="text-lg font-semibold text-white">Telegram Alerts</h3>
-          <p className="text-sm text-gray-400">Agent notifications via messaging</p>
+          <p className="text-sm text-gray-400">
+            Agent notifications via messaging
+          </p>
         </div>
       </div>
 
       <div className="bg-black/40 border border-[var(--color-panel-border)] rounded-xl p-4 flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-300">Chat ID</span>
-          <span className="text-xs px-2 py-1 bg-white/5 rounded text-gray-400 font-mono">105829302</span>
+          <span className="text-xs px-2 py-1 bg-white/5 rounded text-gray-400 font-mono">
+            105829302
+          </span>
         </div>
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-300">Notify on Auto-Merge</span>
